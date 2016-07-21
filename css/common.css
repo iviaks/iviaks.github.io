@@ -13,21 +13,29 @@ section {
 section#about {
     background: url(../img/bg_about.jpg);
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 section#projects {
     background: url(../img/bg_projects.jpg);
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 section#skills {
     background: url(../img/bg_skills.jpg);
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 section#contacts {
     background: url(../img/bg_contacts.jpg);
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 section .container {
@@ -37,6 +45,8 @@ section .container {
 section .container .row {
     background: rgba(0, 0, 0, 0.4);
     box-shadow: 1px 1px 2px #000;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 section .container .row {
