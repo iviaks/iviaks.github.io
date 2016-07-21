@@ -11,43 +11,14 @@
     <script src="bower_components/animatescroll.js-master/animatescroll.min.js"></script>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/pgwslider/pgwslider.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai:200" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai:200" rel="stylesheet">
     <link rel="stylesheet" href="css/common.css">
 </head>
 
 <body ng-app="myApp">
-    <nav class="navbar navbar-inverse  navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#iViaksNavBar" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">
-                    iViaks
-                </a>
-            </div>
-            <div class="collapse navbar-collapse" id="iViaksNavBar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a onclick="$('#about').animatescroll({scrollSpeed:1000,easing:'easeOutBounce'});" href="#">About</a></li>
-                    <li><a onclick="$('#projects').animatescroll({scrollSpeed:1000,easing:'easeOutBounce'})" href="#">Projects</a></li>
-                    <li><a onclick="$('#skills').animatescroll({scrollSpeed:1000,easing:'easeOutBounce'})" href="#">Skills</a></li>
-                    <li><a onclick="$('#contacts').animatescroll({scrollSpeed:1000,easing:'easeOutBounce'})" href="#">Contacts</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <section name="about" id="about" class="cd-section visible">
-        <div class="container">
-            <div class="row">
-                <article>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet adipisci magni, in molestias necessitatibus, consequatur deleniti perferendis laudantium iure, doloribus rem perspiciatis pariatur dolorem cupiditate quasi non ducimus impedit. Assumenda, soluta molestias obcaecati pariatur vero optio ipsa dignissimos, ducimus sed aliquam numquam inventore alias blanditiis? Minima, unde ipsa ipsum sed, iure dolorum, ut nam deserunt nisi ab voluptatem excepturi natus? Excepturi iure nulla dolor quia nisi, odio et sequi unde doloribus aut ad? Quia unde, optio vero eaque, consequuntur, dolorem soluta deserunt magni corrupti dolore numquam quaerat praesentium! Recusandae rem distinctio, laboriosam ullam aspernatur quasi ut, nemo, vero enim eaque odit. Non vero praesentium ex quas suscipit maxime assumenda quod fugiat dicta animi nobis consectetur asperiores, cum sunt voluptatum. Perspiciatis quam rem, odit rerum ratione itaque, harum, quas labore nesciunt quo reiciendis consequatur fuga recusandae inventore enim id doloribus! Repudiandae ducimus laudantium laboriosam quo facere aliquam? Quo aliquid, sunt quasi, molestias soluta exercitationem possimus recusandae. Commodi rem officiis, ratione nisi debitis, aliquid voluptatum, distinctio, hic voluptas fuga odio. Aut sequi eos esse quas molestias, totam corporis ad, architecto debitis animi quis, harum pariatur, inventore ut modi natus. Fugit tenetur corporis earum pariatur, vitae expedita, exercitationem nesciunt, itaque repellat quod consequatur.</p>
-                </article>
-            </div>
-        </div>
+    <nav class="navbar navbar-inverse  navbar-fixed-top" ng-include="'navigation.html'"></nav>
+    <section name="about" id="about">
+        <div class="container" ng-include="'about.html'"></div>
     </section>
     <section name="projects" id="projects">
         <div class="container">
@@ -70,47 +41,14 @@
         </div>
     </section>
     <section name="skills" id="skills" ng-controller="skillsCtrl">
-        <div class="container">
-            <div class="row">
-                <ul>
-                    <li ng-repeat="(skill, value) in skills">
-                        {{ skill + ": " + value/2 }}
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <div class="container" ng-include="'skills.html'"></div>
     </section>
     <section name="contacts" id="contacts" ng-controller="contactsCtrl">
-        <div class="container">
-            <div class="row">
-                <ul>
-                    <li ng-repeat="(contact, value) in contacts">
-                        {{ contact + ": " + value }}
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <div class="container" ng-include="'contacts.html'"></div>
     </section>
-    <script>
-    $(document).ready(function() {
-        var pgwSlider = $('.pgwSlider').pgwSlider();
-        pgwSlider.reload({
-            displayControls: true,
-            transitionEffect: 'sliding'
-        });
-    });
-    var app = angular.module("myApp", []);
-    app.controller("skillsCtrl", function($scope, $http) {
-        $http.get("skills.json").then(function(response) {
-            $scope.skills = response.data;
-        });
-    });
-    app.controller("contactsCtrl", function($scope, $http) {
-        $http.get("contacts.json").then(function(response) {
-            $scope.contacts = response.data;
-        });
-    });
-    </script>
+    <script src="js/common.js"></script>
+    <script src="js/AngularModules.js"></script>
+    <script src="js/AngularControllers.js"></script>
 </body>
 
 </html>
