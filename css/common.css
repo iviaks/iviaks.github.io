@@ -20,22 +20,30 @@ section .container .row{
     padding: 20px;
 }
 section#about{
-    background: url(../img/bg_4.jpg);
+    background: url(../img/bg_about.jpg);
     background-size: cover;
 }
 section#projects{
-    background: url(http://static1.squarespace.com/static/55440c43e4b067ba8b4002ef/t/554c58d9e4b04e25afd7ac19/1431066842486/bg-brick-dark-bw.jpg?format=1500w);
+    background: url(../img/bg_projects.jpg);
     background-size: cover;
 }
 section#skills{
-    background: url(../img/bg_1.jpg);
+    background: url(../img/bg_skills.jpg);
     background-size: cover;
 }
 section#contacts{
-    background: url(http://orig05.deviantart.net/4c78/f/2014/279/3/5/dark_empty_background__stock__by_wormi98-d81tbhf.jpg);
+    background: url(../img/bg_contacts.jpg);
     background-size: cover;
 }
 
 .navbar-inverse{
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.8);
+    max-height: 100px;
+}
+
+.navbar-brand{
+    /*font-family: 'Poiret One', cursive;*/
+    /*font-family: 'Lato', sans-serif;*/
+    font-family: 'Arima Madurai', cursive;
+    font-size: 24pt;
 }
