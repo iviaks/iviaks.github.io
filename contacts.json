@@ -1,4 +1,22 @@
 {
-    "Phone"     : "+380930444378",
-    "E-mail"    : "max-saykov@mail.ru"
+    "Phone"     : [
+        "img/phone.png",
+        "+380669412126",
+        "tel:+380669412126"
+    ],
+    "E-mail"    : [
+        "img/email.png",
+        "max-saykov@mail.ru",
+        "mailto:max-saykov@mail.ru"
+    ],
+    "Vk"        : [
+        "img/vk.png",
+        "iViaks",
+        "http://vk.com/iviaks"
+    ],
+    "LinkedIn"  : [
+        "img/linkedin.png",
+        "iViaks",
+        "http://www.linkedin.com/in/iviaks"
+    ]
 }

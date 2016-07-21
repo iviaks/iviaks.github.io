@@ -1,7 +1,10 @@
 <div class="row">
-    <ul>
-        <li ng-repeat="(contact, value) in contacts">
-            {{ contact + ": " + value }}
-        </li>
-    </ul>
+    <div class="col-sm-6 col-md-3" ng-repeat="contact in contacts">
+        <a href="{{ contact[2] }}">
+            <figure>
+                <img src="{{ contact[0] }}">
+                <figcaption>{{ contact[1] }}</figcaption>
+            </figure>
+        </a>
+    </div>
 </div>

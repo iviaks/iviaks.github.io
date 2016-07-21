@@ -51,3 +51,15 @@ section .container .row {
     font-family: 'Arima Madurai', cursive;
     font-size: 24pt;
 }
+
+.modal-body p{
+    margin: 10px;
+    text-align: justify;
+}
+figure{
+    text-align: center;
+    padding: 10px;
+}
+figcaption{
+    margin: 5px;
+}

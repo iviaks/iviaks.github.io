@@ -16,7 +16,7 @@
 </head>
 
 <body ng-app="myApp">
-    <nav class="navbar navbar-inverse  navbar-fixed-top" ng-include="'navigation.html'"></nav>
+    <nav class="navbar navbar-default  navbar-fixed-top" ng-include="'navigation.html'"></nav>
     <section name="about" id="about">
         <div class="container" ng-include="'about.html'"></div>
     </section>
@@ -24,17 +24,17 @@
         <div class="container">
             <div class="row">
                 <ul class="pgwSlider">
-                    <li><img src="img/paris.jpg" alt="Paris, France" data-description="Eiffel Tower and Champ de Mars"></li>
-                    <li><img src="img/montreal.jpg" alt="Montréal, QC, Canada" data-large-src="montreal.jpg"></li>
                     <li>
-                        <img src="img/shanghai.jpg">
-                        <span>Shanghai, China</span>
+                        <img src="img/paris.jpg" alt="" data-description="<a href='#' data-toggle='modal' data-target='#project_1' class='btn btn-primary'>Подробнее</a>">
                     </li>
                     <li>
-                        <a href="http://www.nyc.gov" target="_blank">
-                            <img src="img/new-york.jpg">
-                            <span>New York, NY, USA</span>
-                        </a>
+                        <img src="img/montreal.jpg" alt="" data-description="<a href='#' data-toggle='modal' data-target='#project_1' class='btn btn-primary'>Подробнее</a>">
+                    </li>
+                    <li>
+                        <img src="img/shanghai.jpg" alt="" data-description="<a href='#' data-toggle='modal' data-target='#project_1' class='btn btn-primary'>Подробнее</a>">
+                    </li>
+                    <li>
+                        <img src="img/new-york.jpg" alt="" data-description="<a href='#' data-toggle='modal' data-target='#project_1' class='btn btn-primary'>Подробнее</a>">
                     </li>
                 </ul>
             </div>
@@ -46,6 +46,7 @@
     <section name="contacts" id="contacts" ng-controller="contactsCtrl">
         <div class="container" ng-include="'contacts.html'"></div>
     </section>
+    <div name="modals" id="modals" ng-include="'projects/main.html'"></div>
     <script src="js/common.js"></script>
     <script src="js/AngularModules.js"></script>
     <script src="js/AngularControllers.js"></script>
