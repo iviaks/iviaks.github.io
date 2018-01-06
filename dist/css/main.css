@@ -1,0 +1,52 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  color: #212121;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent); }
+  header .header-left {
+    position: relative;
+    flex-grow: 3; }
+    header .header-left .avatar {
+      display: none;
+      height: 50px;
+      width: 50px;
+      background-image: url(/vendor/images/avatar.png);
+      background-size: cover;
+      position: absolute;
+      bottom: -50px;
+      left: 30px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.75); }
+  header .header-right {
+    flex-grow: 1; }
+    header .header-right .navigation {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      justify-content: flex-end; }
+      header .header-right .navigation li {
+        flex-grow: 1; }
+        header .header-right .navigation li a {
+          text-decoration: none;
+          color: #fafafa;
+          display: block;
+          text-align: center;
+          font-size: 24px; }
+  header.active {
+    background-image: none;
+    background-color: #fafafa;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.75); }
+    header.active .header-left .avatar {
+      display: block; }
+    header.active .header-right .navigation li a {
+      color: #212121; }

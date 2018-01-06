@@ -1,0 +1,16 @@
+{
+  "name": "iviaks.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:iviaks/iviaks.github.io.git",
+  "author": "M. Saykov <max-saykov@mail.ru>",
+  "license": "MIT",
+  "scripts": {
+    "build": "./node_modules/.bin/gulp build",
+    "watch": "./node_modules/.bin/gulp watch"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}

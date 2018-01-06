@@ -1,0 +1,79 @@
+@import 'variables';
+@import 'mixins';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $white;
+    color: $black;
+    @include R-Regular;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), transparent);
+
+    .header-left {
+        position: relative;
+        flex-grow: 3;
+
+        .avatar {
+            display: none;
+            height: 50px;
+            width: 50px;
+            background-image: url(/vendor/images/avatar.png);
+            background-size: cover;
+            position: absolute;
+            bottom: -50px;
+            left: 30px;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, .75);
+        }
+    }
+    .header-right {
+        flex-grow: 1;
+
+        .navigation {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            justify-content: flex-end;
+            li {
+                flex-grow: 1;
+                a {
+                    text-decoration: none;
+                    color: $white;
+                    display: block;
+                    text-align: center;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    &.active {
+        background-image: none;
+        background-color: $white;
+        box-shadow: 0 0 25px rgba(0, 0, 0, .75);
+
+        .header-left {
+            .avatar {
+                display: block;
+            }
+        }
+
+        .header-right{
+            .navigation {
+                li {
+                    a {
+                        color: $black;
+                    }
+                }
+            }
+        }
+
+    }
+}
